@@ -1,16 +1,30 @@
-export const App = () => {
-  return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
-  );
-};
+import { Component } from 'react';
+
+export class App extends Component {
+  state = {
+    good: 0,
+    neutral: 0,
+    bad: 0,
+  };
+
+  render() {
+    return (
+      <div>
+        <h1>Please leave feedback</h1>
+        <ul>
+          <li>
+            <button>Good</button>
+          </li>
+          <li>
+            <button>Neutral</button>
+          </li>
+          <li>
+            <button>Bad</button>
+          </li>
+        </ul>
+        {/* <FeedbackOptions options={} onLeaveFeedback={}></FeedbackOptions> */}
+        {/* <Statistics good={} neutral={} bad={} total={} positivePercentage={}></Statistics> */}
+      </div>
+    );
+  }
+}
